@@ -1,11 +1,18 @@
 import React, { Component } from "react";
 import { Button } from "@material-ui/core";
-
+import AddCircleTwoToneIcon from "@material-ui/icons/AddCircleTwoTone";
 import Typography from "@material-ui/core/Typography";
 import { Box } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
 
 export default class AddAppointment extends Component {
   render() {
+    const useStyles = makeStyles((theme) => ({
+      button: {
+        margin: theme.spacing(1),
+      },
+    }));
+
     return (
       <div
         className={
@@ -14,7 +21,14 @@ export default class AddAppointment extends Component {
         }>
         <Typography component='div' variant='body1' className='apt-addheading'>
           <Box bgcolor='primary.main' color='primary.contrastText' p={2}>
-            Add Appointment
+            <Button
+              variant='contained'
+              color='default'
+              className={useStyles.button}
+              startIcon={<AddCircleTwoToneIcon />}
+              onClick={this.props.toggleForm}>
+              Add Appointment{" "}
+            </Button>
           </Box>
         </Typography>
 

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { IconButton } from "@material-ui/core";
-import CancelPresentationIcon from "@material-ui/icons/CancelPresentation";
+
 import CloseIcon from "@material-ui/icons/Close";
 import Moment from "react-moment";
 

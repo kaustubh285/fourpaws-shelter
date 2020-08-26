@@ -10,13 +10,19 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      formDisplay: false,
+      formDisplay: true,
       myAppointments: [],
     };
 
     this.deleteAppointment = this.deleteAppointment.bind(this);
+    this.toggleForm = this.toggleForm.bind(this);
   }
-
+  toggleForm() {
+    const newFormDisplay = !this.state.formDisplay;
+    this.setState({
+      formDisplay: newFormDisplay,
+    });
+  }
   deleteAppointment(dAppointment) {
     let newAppointmentList = this.state.myAppointments;
     newAppointmentList = without(newAppointmentList, dAppointment);
@@ -46,7 +52,10 @@ class App extends React.Component {
           <div className='row'>
             <div className='col-md-12 bg-white'>
               <div className='container'>
-                <AddAppointment formDisplay={this.state.formDisplay} />
+                <AddAppointment
+                  toggleForm={this.toggleForm}
+                  formDisplay={this.state.formDisplay}
+                />
                 <SearchAppointment />
                 <ListAppointment
                   appointments={this.state.myAppointments}
