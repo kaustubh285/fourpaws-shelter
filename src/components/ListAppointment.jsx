@@ -23,8 +23,8 @@ export default class ListAppointment extends Component {
                 <span className='apt-date ml-auto'>
                   <Moment
                     date={aptmt.aptDate}
-                    parse='YYYY-MM-dd hh:mm'
-                    format='D-MMM | h:mma'
+                    parse='YYYY-MM-DD hh:mm'
+                    format='Do MMM | h:mma'
                   />
                 </span>
               </div>

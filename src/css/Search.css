@@ -1,0 +1,19 @@
+.dropdown-toggle {
+  border: none !important;
+}
+
+.ddrop {
+  float: right !important;
+  align-content: flex-end;
+}
+
+.active {
+  background-color: #3f51b5 !important;
+  color: white;
+}
+
+.active :hover {
+  background-color: #3f51b5 !important;
+  /* box-shadow: white 0px 0px 0px 1px; */
+  color: white;
+}
